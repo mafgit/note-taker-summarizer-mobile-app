@@ -26,6 +26,7 @@ const ThemedText = ({
         fontFamily: bold ? "Bold" : semibold ? "SemiBold" : "Regular",
         fontSize: size ? sizes[size] : sizes["md"],
         textAlign: center ? "center" : "auto",
+        width: "100%",
       }}
       {...props}
     >

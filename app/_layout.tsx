@@ -20,6 +20,7 @@ export default function RootLayout() {
     <>
       <Stack initialRouteName="home">
         <Stack.Screen name="home" options={{ headerShown: false }} />
+        <Stack.Screen name="card/[id]" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" options={{ headerShown: false }} />
       </Stack>
       <StatusBar style="auto" />
