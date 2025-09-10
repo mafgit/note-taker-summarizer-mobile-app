@@ -2,7 +2,6 @@ import Screen from "@/components/Screen";
 import ThemedButton from "@/components/ThemedButton";
 import ThemedText from "@/components/ThemedText";
 import { radius } from "@/constants/sizes";
-import { API_BASE_URL } from "@/env";
 import { CardType, data } from "@/services/cards";
 import { useLocalSearchParams } from "expo-router";
 import { useState } from "react";
@@ -33,7 +32,7 @@ const CardPage = () => {
           <ThemedButton
             onPress={async () => {
               try {
-                const res = await fetch(API_BASE_URL + "/summarize", {
+                const res = await fetch("http://127.0.0.1:5000/summarize", {
                   method: "POST",
                   body: JSON.stringify({ text: item?.body }),
                   headers: {
